@@ -27,4 +27,6 @@ int main(){
 
     //printing the object's properties
     cout << s2->age << " " << s2->rollNumber << endl;
+
+    delete s2;
 }

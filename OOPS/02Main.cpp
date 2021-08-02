@@ -15,5 +15,7 @@ int main(){
     s2->display();
     cout << s2->getAge() << endl;
 
+    delete s2;
+
     return 0;
 }

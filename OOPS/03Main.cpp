@@ -12,5 +12,7 @@ int main(){
     Construct * c3 = new Construct(11, 21);
     c3->display();
 
+    delete c3;
+
     return 0;
 }
