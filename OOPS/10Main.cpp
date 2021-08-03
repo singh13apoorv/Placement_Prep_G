@@ -13,6 +13,15 @@ int main(){
     f2.print();
     f3.print();
     f4.print();
+    //++f1;
+    //f1.print();
+    f3 = ++f1;
+    f1.print();
+    f3.print();
+
+    f4 = ++(++f1);
+    f4.print();
+    f1.print();
 
     Fractions f5 = f1 * f2;
     if (f5 == f1){

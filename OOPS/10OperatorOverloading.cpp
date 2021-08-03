@@ -55,4 +55,12 @@ class Fractions{
     bool operator==(Fractions const &f2) const {
         return (numerator == f2.numerator && denominator == f2.denominator);
     }
+
+    //Preincrement operator
+    Fractions& operator++(){
+        numerator += denominator;
+        simplify();
+
+        return *this;
+    }
 };
