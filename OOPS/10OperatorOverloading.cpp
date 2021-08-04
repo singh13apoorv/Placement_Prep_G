@@ -63,4 +63,25 @@ class Fractions{
 
         return *this;
     }
+
+    //Post-increament operator
+    Fractions operator++(int){
+        Fractions fnew(numerator, denominator);
+        numerator += denominator;
+        simplify();
+        fnew.simplify();
+        return fnew;
+    }
+
+    Fractions& operator+=(Fractions const &f2){
+        int lcm = denominator * f2.denominator;
+        int x = lcm / denominator;
+        int y = lcm / f2.denominator;
+        int num = (x * numerator) + (y * f2.numerator);
+
+        numerator = num;
+        denominator = lcm;
+        simplify();
+        return *this;
+    }
 };

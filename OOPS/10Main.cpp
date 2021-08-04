@@ -8,6 +8,8 @@ int main(){
 
     Fractions f3 = f1 * f2;
     Fractions f4 = f1 + f2;
+    Fractions f5 = f1 * f2;
+
 
     f1.print();
     f2.print();
@@ -23,7 +25,19 @@ int main(){
     f4.print();
     f1.print();
 
-    Fractions f5 = f1 * f2;
+    f5 = f1++;
+    f5.print();
+    f1.print();
+
+    f1 += f2;
+    f1.print();
+    f2.print();
+
+    (f1 += f2) += f3;
+    f1.print();
+    f2.print();
+    f3.print();
+
     if (f5 == f1){
         cout << "equal" << endl;
     }
