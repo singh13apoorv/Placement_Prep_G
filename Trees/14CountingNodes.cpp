@@ -47,13 +47,7 @@ int CountNodes(BinaryTreeNode<int>* root){
     if (root == NULL){
         return 0;
     }
-
-    int ans = 1;
-
-    ans += CountNodes(root -> leftChild);
-    ans += CountNodes(root -> rightChild);
-
-    return ans;
+    return 1 + CountNodes(root -> leftChild) + CountNodes(root -> rightChild);
 }
 
 int main(){
